@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+*{
+    color: white;
+}
+html{
+    scrollbar-width: none;
+}
+::selection{
+    background-color: red;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: white;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.303);  
+    z-index: 1;
+    overflow: hidden;
+}
+nav div{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+nav .menu li{
+    display: flex;
+
+}
+nav .menu a{
+    text-decoration: none;
+    color: white;
+    margin-right: 0px;
+    padding: 6px;
+    border-radius: 4px;
+    border-width: 4px;
+    transition: all 0.3s;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(255, 255, 255, 0);
+}
+nav .menu a:hover{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: yellow;
+    color: yellow;
+}
+.bi-controller{
+    font-size: 30px;
+}
+.signIn{
+    border-width: 4px;
+    margin-right:10px ;
+    padding:6px;
+    transition: all 0.2s;
+    border-radius: 4px;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(255, 255, 255, 0);
+}
+.signInbtn{
+    text-decoration: none;
+    color: white;
+
+
+}
+.signIn:hover{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: yellow;
+}
+.signIn:hover .signInbtn{
+    color: yellow;
+}
+.signIn:hover i{
+    color: yellow;
+}
+.backgroundvideo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 150vh;
+    width: auto;
+    height: 100vh;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+.firstLook{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: 1px;
+    background: linear-gradient(rgb(0, 0, 64),rgb(220, 0, 220));
+}
+.firstLook h2,h3{
+    text-transform: uppercase;
+}
+.firstLook h1{
+    color: yellow;font-family: 'Oswald', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 65px;
+    animation: flicker 2s infinite;
+}
+.firstLook h1::selection,span::selection{
+    background-color: rgb(0, 0, 80);
+    color: white;
+}
+@keyframes flicker{
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        text-shadow: 0px 0px 30px white;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        text-shadow: none;
+    }
+}
+.firstLook .img{
+    width: 600px;
+    height: 600px;
+    border-radius: 80% 80% 100% 70%;
+    background: url("https://img.freepik.com/premium-photo/cute-little-soldier-3d-game-character-prototype-concept-made-with-generative-ai_245726-4583.jpg")no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+.firstLook .text{
+    padding: 40px;
+    border-radius: 30px;
+}
+.cb{
+    background-color: white;
+}
+.card-container {
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    transform: translateX(100%);
+    transition: transform 2s ease-out, opacity 2s ease-out;
+}
+.card-container.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.card {
+    overflow: hidden;
+    min-width: 450px;
+    min-height: 450px;
+    max-width: 400px;
+    max-height: 400px;
+    margin-right: 40px;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto; /* Prevents the card from shrinking */
+    transition: 0.3s;
+}
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.642);
+}
+.card .img1{
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('https://www.minecraft.net/content/dam/games/minecraft/key-art/Vanilla-PMP_Collection-Carousel-0_Trails-and-Tales_1280x768.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    height: 130px;
+    width: 130px;
+    top: 10px;
+}
+.card .img2{
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('https://cdn.vox-cdn.com/thumbor/P9cwWI3zoO--G6tZvqKIQwLw01c=/0x0:1280x720/1200x800/filters:focal(538x258:742x462)/cdn.vox-cdn.com/uploads/chorus_image/image/73184742/dragons_dogma_2_arisen.0.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    height: 130px;
+    width: 130px;
+    top: 10px;
+}
+.card .img3{
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('https://assets-prd.ignimgs.com/2023/12/11/popthelostcrown-blogroll-1702323647791.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    height: 130px;
+    width: 130px;
+    top: 10px;
+}
+.card .img4{
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('https://www.godisageek.com/wp-content/uploads/Tekken-8-2.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    height: 130px;
+    width: 130px;
+    top: 10px;
+}
+.card .img5{
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('https://blog.playstation.com/tachyon/2024/01/00b432c63c88b14d3bcf796380edb26e37c01032.jpeg?resize=1088%2C612&crop_strategy=smart') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    height: 130px;
+    width: 130px;
+    top: 10px;
+}
+.card .img6{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('https://blog.playstation.com/tachyon/2024/01/109da86c65ebe38c24498c55a910baa097765db8-scaled.jpeg?resize=1088%2C612&crop_strategy=smart') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    height: 130px;
+    width: 130px;
+    top: 10px;
+}
+.cstyle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .ctext{
+    margin-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.getNowbtn{
+    text-decoration: none ;
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
+.states{
+    overflow-x: hidden;
+    display: flex;
+    width: 100%;
+    background: linear-gradient(rgb(220, 0, 220),rgb(0, 0, 64));
+}
+.states .s1{
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.275);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+    transform: translateX(100%);
+}
+.s1.visible{
+    transform: translateX(0%);
+}
+.states .s2{
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.275);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+    transform: translateX(-100%);
+}
+.s2.visible{
+    transform: translateX(0%);
+}
+.states .s3{
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.275);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+    transform: translateX(100%);
+}
+.s3.visible{
+    transform: translateX(0%);
+}
+.states .s4{
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.275);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+    transition:1s;
+    transform: translateX(-100%);
+}
+.s4.visible{
+    transform: translateX(0%);
+}
+.states .simg1{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('src/state1.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    margin-left: 100px; 
+}
+.states .simg2{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('src/state2.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    margin-right: 100px; 
+}
+.states .simg3{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('src/state3.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    margin-left: 200px; 
+}
+.states .simg4{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.362);
+    background:url('src/state4.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 25px;
+    margin-right: 100px; 
+}
+.states .tcontent{
+    width: 70%;
+}
+.tcontent p{
+    font-size: 20px;
+}
+footer{
+    width: 100%;
+    background-color: rgb(0, 0, 64);
+}
+footer .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    opacity: 0;
+    transition: all 0.6s;
+}
+.icon a {
+    text-decoration: none;
+    padding: 15px;
+    margin: 15px;
+    font-size: 40px;
+    transition: all 0.3s;
+}
+.icon a:hover{
+    background-color: #f0f0f033;
+}
+.visible {
+    opacity: 1;
+}
+.states{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
