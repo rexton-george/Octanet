@@ -1,0 +1,92 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  ::selection{
+    background-color: red;
+    color: white;
+  }
+.container {
+    max-width: 600px;
+    min-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffbfbf;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 200px;
+  }
+#task-list {
+    list-style-type: none;
+    padding: 0;
+  }
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    background-color: #ff76766a;
+    border-radius: 20px;
+  }
+.task-item input[type="text"] {
+    width: 80%;
+  }
+.container h1{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+.container div{
+    display: flex;
+    justify-content: center;
+  }
+#task-form{
+    background-color: rgb(160, 211, 255);
+    padding: 10px 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+#task-form button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+#task-form input{
+    background-color: transparent;
+    border: none;
+  }
+#task-form input::after{
+    background-color: transparent;
+    border: none;
+  }
+#task-form input::placeholder{
+    color: aliceblue;
+  }
+  .edit{
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 2px;
+  }
+  .delete{
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .content{
+    background-color: transparent;
+    color: white;
+    border: none;
+  }
